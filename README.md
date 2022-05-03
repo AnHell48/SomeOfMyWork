@@ -1,2 +1,2 @@
 # MyAwersomeIdeas
-My portfolio.
+My portfolio ... coming soon!
