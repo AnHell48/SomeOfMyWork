@@ -13,7 +13,7 @@ function SetPageTitle(projectName)
 
 function LoadXMLData() 
 {
-    let xmlFile = "https://raw.githubusercontent.com/AnHell48/PokeTypes_JS/master/content/idk.xml";//"content/idk.xml";
+    let xmlFile = "https://raw.githubusercontent.com/AnHell48/MyAwersomeIdeas/main/content/idk.xml";//"content/idk.xml";
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () 
