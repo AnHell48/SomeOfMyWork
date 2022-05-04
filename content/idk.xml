@@ -16,7 +16,7 @@
         </Project>
         <Project id="3Dbottle2019">
             <name>Project: bottle</name>
-            <desc>some awesome bottle.</desc>
+            <desc>some awesome bottle.some awesome bottle.some awesome bottle.some awesome bottle.some awesome bottle.</desc>
             <imgssrc>bottleside.png,bottlefront.jpg</imgssrc>
         </Project>
     </Design>

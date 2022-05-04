@@ -1,78 +1,91 @@
-var xmlDoc, xmlTagContent;
+"use strict"
+var xmlDoc, xmlTagContent, projectID;
 
 window.onload = () => 
 {
-    SetPageTitle("Test");
+    //TODO
+    //create func to get project id
+    GetProjectID();
     LoadXMLData();
 };
 
 function SetPageTitle(projectName)
 {
-    document.getElementById("page-title").innerHTML =projectName +"|Angel Awesome Ideas";
+    //set project name on tab
+    document.getElementById("page-title").innerHTML =`${projectName} |Angel Awesome Ideas`;
+}
+
+function GetProjectID()
+{
+    /*TODO
+    * get the value from the url (GET)
+    * if value is null -> redirect back to homepage.
+    */
+
 }
 
 function LoadXMLData() 
 {
     let xmlFile = "https://raw.githubusercontent.com/AnHell48/MyAwersomeIdeas/main/content/idk.xml";//"content/idk.xml";
     let xhttp = new XMLHttpRequest();
-
+    
     xhttp.onreadystatechange = function () 
     {
         if (this.readyState == 4 && this.status == 200) 
         {
-            // LoadXMLData(this.response);
-            let parser = new DOMParser();
-
-            xmlDoc = parser.parseFromString(this.response, "text/xml");
-
+            LoadPageContent(this.response);
         }
     };
+
     xhttp.open("GET", xmlFile, true);
     xhttp.send();
 }
 
-// function LoadData(xml) 
-// {
-    
-//     let parser = new DOMParser();
-
-//     xmlDoc = parser.parseFromString(this.response, "text/xml");
-
-//     let xmlTagContent = xmlDoc.getElementsByTagName("Design")[0].getElementsByTagName("Project");
-
-//     for (let t = 0; t < xmlTagContent.length; t++)
-//      {
-//         console.log(xmlTagContent[t].getElementsByTagName("name")[0].childNodes[0].nodeValue);
-//         console.log(xmlTagContent[t].getElementsByTagName("desc")[0].childNodes[0].nodeValue);
-//         console.log(xmlTagContent[t].getElementsByTagName("imgssrc")[0].childNodes[0].nodeValue);
-//         console.log("------------------------------------------");
-//     }
-// }
-
-function LoadPageContent(tagToLoad, projectName) 
+function LoadPageContent(_xml) 
 {
-    let pName = document.getElementById("project-name").innerHTML;
-    let pdesc = document.getElementById("project-description").innerHTML;    
-    let pimgs = document.getElementById("project-imgs").innerHTML;
+    let pName = document.getElementById("project-name");
+    let pdesc = document.getElementById("project-description");    
+    let pimgs = document.getElementById("project-imgs");
+    let imgArr, project_name;
+    let parser = new DOMParser();
 
     //tagToLoad is the 3D, Games,etc.
     //tag content as in the content of general, games, 3D, etc.
-    let xmlTagContent = xmlDoc.getElementsByTagName(tagToLoad);
-
+    // let xmlTagContent = xmlDoc.getElementsByTagName(tagToLoad);
+    
+    xmlDoc = parser.parseFromString(_xml, "text/xml");
     //get all the projects
-    //xmlDoc.getElementsByTagName("Design")[0].getElementsByTagName("Project");
     xmlTagContent = xmlDoc.getElementsByTagName("Project");
+    // xmlTagContent = xmlDoc.getElementsByTagName("Project");
 
     for (let t = 0; t < xmlTagContent.length; t++)
      { 
-         console.log(xmlTagContent[t].childNodes[0].nodeValue);
-        // if the first tag inside
-        // if(xmlTagContent[t].childNodes[0].nodeValue == projectName)
-        // {
-        //     pName = xmlTagContent[t].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-        //     pdesc = xmlTagContent[t].getElementsByTagName("desc")[0].childNodes[0].nodeValue;
-        //     pimgs = xmlTagContent[t].getElementsByTagName("imgssrc")[0].childNodes[0].nodeValue;
-        // }    
-     }
+         // get the project data by attribute "id"
+        if (xmlTagContent[t].getAttribute("id") === projectID)
+        {
+            project_name = xmlTagContent[t].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+            pdesc.innerHTML = xmlTagContent[t].getElementsByTagName("desc")[0].childNodes[0].nodeValue;
+            imgArr = xmlTagContent[t].getElementsByTagName("imgssrc")[0].childNodes[0].nodeValue;
+            imgArr = imgArr.split(",");
+        }  
+    }
+
+    //set project name
+    pName.innerHTML = pName.innerHTML;
+    SetPageTitle(project_name);
+
+    //create and set images.
+    for(let i=0; i < imgArr.length; i++)
+    {
+        console.log(imgArr[i]);
+        let imgTag = document.createElement("img");
+        imgTag.src = "content/"+imgArr[i];
+        imgTag.alt = "Printscreen from project";
+        pimgs.appendChild(imgTag);
+        /*TODO
+        * create custom alt description then store them like 
+        *imgsrc,alt,imgsrc,atl,...
+        */
+    }
     
 }

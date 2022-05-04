@@ -10,5 +10,19 @@
 </head>
 <body>
     <h1> Website under construction ...</h1>
+    <!-- <form action="/project.html" method="get">        
+        <input type="submit" value="3Dprueba2019">3D prueba</input>
+        <input type="submit" value="3Dbottle2019">Awesome bottle</input>
+    </form> -->
+    <span onclick="GoToProject('3Dprueba2019')">Bottle :)</span>
+    <a href="/project.html?3Dprueba2019"><span>Prueba :)</span></a>
+    <a href="/project.html?3Dbottle2019"><span>Bottle :)</span></a>
+
+    <script>
+        function GoToProject(projectID)
+        {
+            window.location.href = "/project.html?";
+        }
+    </script>
 </body>
 </html>
