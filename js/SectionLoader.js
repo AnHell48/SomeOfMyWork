@@ -21,7 +21,19 @@ function GetProjectID()
     * get the value from the url (GET)
     * if value is null -> redirect back to homepage.
     */
-
+   let urlParam = new URLSearchParams(window.location.search);
+   
+   if(urlParam.has("projectid"))
+   {
+        projectID = urlParam.get("projectid");
+   }
+   else
+   {
+       /*TODO
+       * - if there's no parameter then load the projects and on select then
+       */
+       window.location.href = "index.html";
+   }
 }
 
 function LoadXMLData() 
