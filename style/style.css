@@ -1,0 +1,44 @@
+
+/* home - top section */
+#top-sect
+{
+    width: 100%;
+    height: 375px;
+
+    background-color: darkcyan;
+}
+
+#menu-tabs
+{
+    display: inline;
+    float: right;
+    margin-right: 20px;
+    width: 500px;
+    height: 40px;
+}
+
+/* home - projects section */
+#projects-sect .project-btn
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+.project-btn
+{
+    /* display: inline; */
+    border: 2px solid black;
+    width: 150px;
+    height: 90px;
+}
+
+#footer-sect
+{
+   
+    width: 100%;
+    height: 150px;
+
+    background-color: darkcyan;
+}
