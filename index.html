@@ -13,7 +13,14 @@
     <!-- Make this a pop up(modal)? then if there is a id on the url then open the modal and the project(for if shared link) -->
     <div id="main-wrapper">
         <div id="top-sect">
-            <div id="menu-tabs"> menu navigation</div>
+            <div id="menu-tabs"> 
+                <ul>
+                    <li><a href="index.html>Home">Home</a></li>
+                    <li><a href="#about-sect">About</a></li>
+                    <li><a href="#projects-sect">Projects</a></li>
+                    <li><a href="#contact-sect">Contact Me</a></li>
+                </ul>
+            </div>
             <h3>-- TOP --</h3>
         </div>
 
@@ -23,8 +30,8 @@
         <br/>
         <div id="about-sect">
             <h3>-- ABOUT --</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Hey! I'm Angel a programmer and self taught 3D artist, welcome to my portfolio. 
+                Here you can find some of my work in the areas of Game, Web and Software Development. </p>
         </div>
 
         <br/>
@@ -39,19 +46,21 @@
         <br/>
         <div id="contact-sect">
             <h3>-- CONTACT --</h3>
+            <p>If you have any question, want to hire me or anything, feel free to contact me</p>
+            <button id="btn-contact" onclick="ContactMe()"> Contact Me</button>
         </div>
 
     </div>
 <footer id="footer-sect">
 <h4>footer ...</h4>
+<ul>
+    <li><a href="#top-sect">Home</a></li>
+    <li><a href="#about-sect">About</a></li>
+    <li><a href="#projects-sect">Projects</a></li>
+    <li><a href="#contact-sect">Contact Me</a></li>
+</ul>
 </footer>
 
-    <script>
-        function GoToProject(projectID)
-        {
-            //set the ID as parameter on the url and redirect.
-            window.location.href = "project.html?projectid="+projectID;
-        }
-    </script>
+<script src="js/Main.js"></script>
 </body>
 </html>

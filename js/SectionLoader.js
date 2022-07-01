@@ -61,6 +61,9 @@ function LoadPageContent(_xml)
     let imgArr, project_name;
     let parser = new DOMParser();
 
+    //set page (tab) title 
+    document.getElementById("page-title").innerHTML += pName; // TEST THIS <-------------------------------EF9WEIF9EWFJ9EWFJ
+    
     //tagToLoad is the 3D, Games,etc.
     //tag content as in the content of general, games, 3D, etc.
     // let xmlTagContent = xmlDoc.getElementsByTagName(tagToLoad);

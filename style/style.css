@@ -17,6 +17,12 @@
     height: 40px;
 }
 
+#menu-tabs ul li
+{    
+    display: inline;
+    margin-left: 10px;
+}
+
 /* home - projects section */
 #projects-sect .project-btn
 {
