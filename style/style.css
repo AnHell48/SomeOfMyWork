@@ -1,5 +1,9 @@
+#sections-wrapper
+{
+    margin: auto;
+    width: 80%;
+}
 
-/* home - top section */
 #top-sect
 {
     width: 100%;
@@ -9,7 +13,7 @@
 }
 
 #menu-tabs
-{
+{ 
     display: inline;
     float: right;
     margin-right: 20px;
@@ -24,13 +28,9 @@
 }
 
 /* home - projects section */
-#projects-sect .project-btn
+/* #projects-sect .project-btn
 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-}
+} */
 
 .project-btn
 {
@@ -40,9 +40,18 @@
     height: 90px;
 }
 
+.project-area
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 #footer-sect
 {
-   
+   padding-left: 10%;
     width: 100%;
     height: 150px;
 

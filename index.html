@@ -24,43 +24,56 @@
             <h3>-- TOP --</h3>
         </div>
 
-        <br/>
-        <h1> Website under construction ...</h1>
+        <div id="sections-wrapper">
+            <h1> Website under construction ...</h1>
 
-        <br/>
-        <div id="about-sect">
-            <h3>-- ABOUT --</h3>
-            <p>Hey! I'm Angel a programmer and self taught 3D artist, welcome to my portfolio. 
-                Here you can find some of my work in the areas of Game, Web and Software Development. </p>
+            <br/>
+            <div id="about-sect">
+                <h3>-- ABOUT --</h3>
+                <p>Hey! I'm Angel a programmer and self taught 3D artist, welcome to my portfolio. 
+                    Here you can find some of my work in the areas of Game, Web and Software Development. </p>
+            </div>
+
+            <br/>
+            <div id="projects-sect">
+
+                <h3>My Projects</h3>
+                <h5>Game Dev.</h5>
+                <div id="games-projects" class="project-area">
+                    <div class="project-btn" onclick="GoToProject('GAMEtest2022')">Game test</div>
+
+                </div>
+                <h5>Software Dev.</h5>
+                <div id="soft-projects" class="project-area">
+                    
+                </div>
+                
+                <h5>3D Modeling</h5>
+                <div id="3d-projects" class="project-area">
+                    <div class="project-btn" onclick="GoToProject('3Dprueba2019')">Bottle test</div>
+                    <div class="project-btn" onclick="GoToProject('3Dprueba2019')">Game test</div>
+
+                </div>
+            </div>
+
+            <br/>
+            <div id="contact-sect">
+                <h3>-- CONTACT --</h3>
+                <p>If you have any question, want to hire me or anything, feel free to contact me</p>
+                <button id="btn-contact" onclick="ContactMe()"> Contact Me</button>
+            </div>
         </div>
-
-        <br/>
-        <div id="projects-sect">
-
-            <h3>Test "Projects"</h3>
-            <div class="project-btn" onclick="GoToProject('3Dprueba2019')">Bottle test</div>
-            <div class="project-btn" onclick="GoToProject('GAMEtest2022')">Game test</div>
-            <div class="project-btn" onclick="GoToProject('3Dprueba2019')">Game test</div>
-        </div>
-
-        <br/>
-        <div id="contact-sect">
-            <h3>-- CONTACT --</h3>
-            <p>If you have any question, want to hire me or anything, feel free to contact me</p>
-            <button id="btn-contact" onclick="ContactMe()"> Contact Me</button>
-        </div>
-
-    </div>
-<footer id="footer-sect">
-<h4>footer ...</h4>
-<ul>
-    <li><a href="#top-sect">Home</a></li>
-    <li><a href="#about-sect">About</a></li>
-    <li><a href="#projects-sect">Projects</a></li>
-    <li><a href="#contact-sect">Contact Me</a></li>
-</ul>
-</footer>
-
+    
+    <footer id="footer-sect">
+    <h4>footer ...</h4>
+    <ul>
+        <li><a href="#top-sect">Home</a></li>
+        <li><a href="#about-sect">About</a></li>
+        <li><a href="#projects-sect">Projects</a></li>
+        <li><a href="#contact-sect">Contact Me</a></li>
+    </ul>
+    </footer>
+</div>
 <script src="js/Main.js"></script>
 </body>
 </html>
