@@ -1,3 +1,28 @@
+body
+{
+  color:#C5C6C7 !important;
+}
+
+a
+{
+  text-decoration: none !important;
+  color:#C5C6C7 !important;
+}
+
+ul li
+{
+  list-style: none;
+}
+.color1
+{
+  background-color: #1F2833;
+}
+
+.color2
+{
+  background-color: #45A29E;
+}
+
 .area-container
 {
     padding: 80 0;
@@ -52,7 +77,6 @@
     width: 100%;
     height: 375px;
 
-    background-color: darkcyan;
 }
 
 #menu-tabs
@@ -81,7 +105,7 @@
 
 .project-btn
 {
-    border: 2px solid black;
+    border: 2px solid #C5C6C7;
     width: 230px;
     height: 180px;
     margin-right: 25px;
@@ -93,7 +117,6 @@
     width: 100%;
     height: 150px;
 
-    background-color: darkcyan;
 }
 
 /*=====================Modal w3school============================*/
