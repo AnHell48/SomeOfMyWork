@@ -1,2 +1,2 @@
-# MyAwersomeIdeas
+# SomeOfMyWork
 My portfolio ... coming soon!
